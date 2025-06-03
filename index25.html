@@ -78,7 +78,7 @@
                         </tr>
                         <tr>
                             <td>Venue</td>
-                            <td><a href="https://iccv.thecvf.com/">ICCV 2025 (Honolulu, Hawai'i)<a></td>
+                            <td><a href="https://iccv.thecvf.com/">ICCV 2025 (Honolulu, Hawai'i)</a></td>
 
                         </tr>
                         <tr>
@@ -213,35 +213,37 @@
                         complex, free-form action queries?</i>
                 </p>
                 <p>
-                    To this end, we organize a competition in which participants are asked to develop their models using
-                    our proposed <a href="">MOT25-StAG dataset</a> (link TBD) as the <b>only</b> source of training data. The
-                    goal is to develop models that can
-                    both localize the temporal window where the described action occurs and track all relevant referred
+                    To this end, we organize a challenging competition in which participants are asked to develop their
+                    models using our proposed dataset as the <b>only</b> source of training data. The goal is to
+                    localize the temporal window where the described action occurs and track all relevant referred
                     objects across that interval.
                 </p>
             </header>
             <p class="content">
 
 
-            <h2>MOT25-StAG temporal localization and tracking</h2>
-            <span class="image fit"><img width="100" src="images/motsynth-teaser-mot-alt.png" alt=""/></span> [image TBD]
+            <h2>MOT25-StAG track</h2>
+            <span class="image fit"><img width="100" src="images/motsynth-teaser-mot-alt.png" alt=""/></span> [image
+            TBD]
 
-            For this task, participants can use all the annotation modalities in MOT25-StAG, and test their temporal
-            windows and bounding box localization and tracking methods on the MOT25-StAG test set.
+            For this track, we integrated three existing datasets (<a href="https://arxiv.org/abs/2102.01558">OVIS</a>,
+            <a href="https://arxiv.org/abs/2010.07548">MOT17</a> and <a
+                href="https://arxiv.org/abs/2003.09003">MOT20</a>) and annotated them with a variety of action language
+            queries into the MOT25-StAG dataset. Participants need to use all annotation modalities in MOT25-StAG and
+            test their temporal window localization and bounding box tracking methods on the MOT25-StAG test set.
             <br/></br>
 
             <strong>Rules: </strong>
             <ul style="list-style-type:disc;">
-                <li> Models cannot be trained on any real data. Pretraining with COCO (or any other
-                    real dataset) is <b>not</b> allowed.
+                <li> Models cannot be trained on any real data. Pretraining with COCO (or any other real dataset) is <b>not</b>
+                    allowed.
                 </li>
                 <li> OVIS, MOT17, MOT20 public (or any other external) detections <b>cannot</b> be used. Detections need
-                    to be
-                    obtained from training on MOT25-StAG only.
+                    to be obtained from training on MOT25-StAG only.
                 </li>
                 <li> OVIS, MOT17, MOT20 training data <b>can only be used for validation</b> and <b>not for training or
-                    fine-tuning</b>.
-                    <!--                    why?-->
+                    fine-tuning</b>. (tentative)
+                    <!--why?-->
                 </li>
                 <li> Participants will have to provide a technical report and code, showing that only the allowed
                     training data was used.
@@ -250,58 +252,25 @@
 
 
             <br/></br>
-            <strong>Dataset: </strong> Train and test sequences are avalible at the <a
-                href="https://motchallenge.net/data/MOT17/">MOTChallenge website</a>.(TBD [a website combines all three
-            datasets]) <br/>
-            <strong>Baselines: </strong> Our baselines, pre-trained models, and helper code for the dataset are avalible
-            <a href="https://github.com/dvl-tum/motsynth-baselines">here</a>. TBD<br/>
-            <strong>Metric: </strong> <a href="https://github.com/JonathonLuiten/TrackEval">HOTA</a>, R1@X, ... will be
-            used to
-            rank participants. TBD [SVAGEval link?]<br/>
+            <strong>Dataset: </strong> Image sequences are available at the <a href="https://songbai.site/ovis/">OVIS
+            website</a>, <a href="https://motchallenge.net/data/MOT17/">MOT17 website</a> and <a
+                href="https://motchallenge.net/data/MOT20">MOT20 website</a>. All annotations can be found <a href="">here</a>.
+            (TBD) <br/>
+            <strong>Baselines: </strong> Our baselines, pre-trained models, and helper code for the dataset are
+            available <a href="https://github.com/dvl-tum/motsynth-baselines">here</a>. TBD
+            <br/>
+            <strong>Metric: </strong> <a href="https://github.com/JonathonLuiten/TrackEval">HOTA</a>, R1@X, R5@X, R10@X,
+            mAP, mIoU.
+            <br/>
             <strong>Test server: </strong> The test server will be made available in the Codabench website on August 1st
             (tentative).
             <br/></br>
-            <hr/>
-
-            <!--            <h2>MOTSynth2MOTS20 track</h2>-->
-            <!--            <span class="image fit"><img width="100" src="images/motsynth-teaser-mots-alt.png" alt=""/></span>-->
-            <!--            For this track, participants can use all the annotation modalities in MOTSynth, and test their tracking and-->
-            <!--            segmentation methods on the MOTS20 (a.k.a. MOTSChallenge) test set.-->
-
-            <!--            <br/></br>-->
-            <!--            <strong>Rules: </strong>-->
-            <!--            <ul style="list-style-type:disc;">-->
-            <!--                <li> Models cannot be trained on any real data, except for ImageNet. Pretraining with COCO (or any other-->
-            <!--                    real dataset) is <b>not</b> allowed.-->
-            <!--                </li>-->
-            <!--                <li> MOT17 public (or any other external) detections/masks <b>cannot</b> be used. Detections need to be-->
-            <!--                    obtained from training on MOTSynth only.-->
-            <!--                </li>-->
-            <!--                <li> MOTS20 training data <b>can only be used for validation</b> and <b>not for training or-->
-            <!--                    fine-tuning</b>.-->
-            <!--                </li>-->
-            <!--                <li> Participants will have to provide a technical report and code, showing that only the allowed-->
-            <!--                    training data was used.-->
-            <!--                </li>-->
-            <!--            </ul>-->
-
-
-            <!--            <br/></br>-->
-            <!--            <strong>Dataset: </strong> Train and test sequences are avalible at the <a-->
-            <!--                href="https://motchallenge.net/data/MOTSynth-MOTS-CVPR22/">MOTChallenge website</a>.<br/>-->
-            <!--            <strong>Baselines: </strong> Our baselines, pre-trained models, and helper code for the dataset are avalible-->
-            <!--            <a href="https://github.com/dvl-tum/motsynth-baselines">here</a>. <br/>-->
-            <!--            <strong>Metric: </strong> <a href="https://github.com/JonathonLuiten/TrackEval">HOTA</a> will be used to-->
-            <!--            rank participants. <br/>-->
-            <!--            <strong>Test server: </strong> The test server will be made available in the MOTChallenge website on March-->
-            <!--            21st.-->
-            <!--            <hr/>-->
-            For the challenge, we will award the three best benchmark submissions. Challenge winners will receive a
-            prize (to be announced), and will be asked to give a short presentation describing their approach at the
-            workshop event.
 
             <hr/>
+            For the challenge, we will award the three best benchmark submissions. Challenge winners will be invited to
+            give a short presentation describing their approach at the workshop event.
 
+            <hr/>
             <h3>Technical report format</h3>
             Please follow a <strong>two-column layout</strong> for your submission. The technical report should <strong>at
             most contain 4 pages</strong> including references. However, shorter reports of 2 pages are very welcome.
@@ -332,8 +301,7 @@
                         <div class="col-4"><span class="image fit"><img src="images/organizers/suprosanna_crop.jpg"
                                                                         alt=""/></span>
                             <p>Suprosanna Shit (UZH)</p></div>
-                        <div class="col-4"><span class="image fit"><img src="images/organizers/rajat_crop.jpg"
-                                                                        alt=""/></span>
+                        <div class="col-4"><span class="image fit"><img src="images/organizers/rajat_crop.jpg" alt=""/></span>
                             <p>Rajat Koner (Amazon)</p></div>
                         <div class="col-4"><span class="image fit"><img src="images/organizers/jindong_crop.jpg"
                                                                         alt=""/></span>

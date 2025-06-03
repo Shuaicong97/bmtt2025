@@ -1,2 +1,2 @@
-# bmtt6-web
-BMTT6 workshop webpage
+# bmtt8-web
+BMTT8 workshop webpage
