@@ -83,20 +83,20 @@
                         </tr>
                         <tr>
                             <td>Train data released</td>
-                            <td>TBD February 21st, 2022</td>
+                            <td>TBD</td>
                         </tr>
                         <tr>
                             <td>Test data released</td>
-                            <td>TBD March 21st, 2022</td>
+                            <td>TBD</td>
                         </tr>
 
                         <tr>
                             <td>Challenge submission deadline</td>
-                            <td>TBD May 23rd, 2022</td>
+                            <td>TBD</td>
                         </tr>
                         <tr>
                             <td>Technical report deadline</td>
-                            <td>TBD May 30th, 2022</td>
+                            <td>TBD</td>
                         </tr>
                         <tr>
                             <td>Recordings</td>
@@ -123,14 +123,14 @@
                         <p>Philipp Krähenbühl (University of Texas)</p></a></div>
                     <div class="col-4"><a href='http://www.cs.cmu.edu/~deva/'><span class="image fit"><img
                             src="images/speakers/deva_crop.jpg" alt=""/></span>
-                        <p>Deva Ramanan (CMU) (tentative)</p></a></div>
+                        <p>Deva Ramanan (CMU)</p></a></div>
                     <div class="col-2"></div>
-                    <div class="col-4"><a href='https://www.vision.rwth-aachen.de/person/1/'><span
-                            class="image fit"><img src="images/speakers/bastian_crop.jpg" alt=""/></span>
-                        <p>Bastian Leibe (RWTH)</p></a></div>
-                    <div class="col-4"><a href='https://alexander-kirillov.github.io/'><span class="image fit"><img
-                            src="images/speakers/alexander.jpg" alt=""/></span>
-                        <p>Alexander Kirillov (Thinking Machines)</p></a></div>
+<!--                    <div class="col-4"><a href='https://www.vision.rwth-aachen.de/person/1/'><span-->
+<!--                            class="image fit"><img src="images/speakers/bastian_crop.jpg" alt=""/></span>-->
+<!--                        <p>Bastian Leibe (RWTH)</p></a></div>-->
+<!--                    <div class="col-4"><a href='https://alexander-kirillov.github.io/'><span class="image fit"><img-->
+<!--                            src="images/speakers/alexander.jpg" alt=""/></span>-->
+<!--                        <p>Alexander Kirillov (Thinking Machines)</p></a></div>-->
                 </div>
             </div>
         </section>
@@ -185,7 +185,7 @@
                     <tr>
                         <td>11:00-11:30 am</td>
                         <td>Invited Talk 3</td>
-                        <td>Deva Ramanan (tentative)</td>
+                        <td>Deva Ramanan</td>
                     </tr>
                     <tr>
                         <td>11:50 am – 12:10 pm</td>
@@ -223,28 +223,22 @@
 
 
             <h2>MOT25-StAG track</h2>
-            <span class="image fit"><img width="100" src="images/motsynth-teaser-mot-alt.png" alt=""/></span> [image
-            TBD]
+            <span class="image fit"><img width="100" src="images/svag_comparison.png" alt=""/></span>
+            <div style="font-size: 12px; line-height: 1.4;">
+            [1] <a href="https://arxiv.org/pdf/2305.13495">Type-to-Track: Retrieve Any Object via Prompt-based Tracking</a> <br/>
+            [2] <a href="https://arxiv.org/pdf/2001.06891">Where Does It Exist: Spatio-Temporal Video Grounding for Multi-Form Sentences</a><br/></br>
+            </div>
+
 
             For this track, we integrated three existing datasets (<a href="https://arxiv.org/abs/2102.01558">OVIS</a>,
             <a href="https://arxiv.org/abs/2010.07548">MOT17</a> and <a
                 href="https://arxiv.org/abs/2003.09003">MOT20</a>) and annotated them with a variety of action language
-            queries into the MOT25-StAG dataset. Participants need to use all annotation modalities in MOT25-StAG and
+            queries into the MOT25-StAG dataset. Participants need to use all annotations in MOT25-StAG and
             test their temporal window localization and bounding box tracking methods on the MOT25-StAG test set.
             <br/></br>
 
             <strong>Rules: </strong>
             <ul style="list-style-type:disc;">
-                <li> Models cannot be trained on any real data. Pretraining with COCO (or any other real dataset) is <b>not</b>
-                    allowed.
-                </li>
-                <li> OVIS, MOT17, MOT20 public (or any other external) detections <b>cannot</b> be used. Detections need
-                    to be obtained from training on MOT25-StAG only.
-                </li>
-                <li> OVIS, MOT17, MOT20 training data <b>can only be used for validation</b> and <b>not for training or
-                    fine-tuning</b>. (tentative)
-                    <!--why?-->
-                </li>
                 <li> Participants will have to provide a technical report and code, showing that only the allowed
                     training data was used.
                 </li>
@@ -254,17 +248,15 @@
             <br/></br>
             <strong>Dataset: </strong> Image sequences are available at the <a href="https://songbai.site/ovis/">OVIS
             website</a>, <a href="https://motchallenge.net/data/MOT17/">MOT17 website</a> and <a
-                href="https://motchallenge.net/data/MOT20">MOT20 website</a>. All annotations can be found <a href="">here</a>.
-            (TBD) <br/>
-            <strong>Baselines: </strong> Our baselines, pre-trained models, and helper code for the dataset are
-            available <a href="https://github.com/dvl-tum/motsynth-baselines">here</a>. TBD
+                href="https://motchallenge.net/data/MOT20">MOT20 website</a>. All annotations can be found <a href="https://drive.google.com/drive/folders/1S-qfooO6VMbibmhWEnBLkzlCj0HF1WYY?usp=drive_link">here</a>.
             <br/>
-            <strong>Metric: </strong> <a href="https://github.com/JonathonLuiten/TrackEval">HOTA</a>, R1@X, R5@X, R10@X,
-            mAP, mIoU.
+            <strong>Baselines: </strong> Our baseline for spatial grounding is available <a href="https://github.com/zyn213/TempRMOT">here</a>,
+            and baseline for temporal grounding is available <a href="https://github.com/Zhuo-Cao/FlashVTG">here</a>.
             <br/>
-            <strong>Test server: </strong> The test server will be made available in the Codabench website on August 1st
-            (tentative).
-            <br/></br>
+            <strong>Metric: </strong> <a href="https://github.com/JonathonLuiten/TrackEval">HOTA</a>, <a href="https://github.com/Shuaicong97/FlashVTG/blob/test/standalone_eval/eval.py">
+            R1@X, R5@X, R10@X, mAP, mIoU</a>.
+            <br/>
+            <strong>Test server: </strong> The test server will be made available in the Codabench website on August 1st.<br/></br>
 
             <hr/>
             For the challenge, we will award the three best benchmark submissions. Challenge winners will be invited to
