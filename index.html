@@ -214,9 +214,8 @@
                 </p>
                 <p>
                     To this end, we organize a challenging competition in which participants are asked to develop their
-                    models using our proposed dataset as the <b>only</b> source of training data. The goal is to
-                    localize the temporal window where the described action occurs and track all relevant referred
-                    objects across that interval.
+                    models to solve the task. The goal of the challenge is to launch a new unified task for localization
+                    and tracking based on large-scale, manually annotated action descriptions.
                 </p>
             </header>
             <p class="content">
@@ -228,15 +227,16 @@
             For this track, we integrated three existing datasets (<a href="https://arxiv.org/abs/2102.01558">OVIS</a>,
             <a href="https://arxiv.org/abs/2010.07548">MOT17</a> and <a
                 href="https://arxiv.org/abs/2003.09003">MOT20</a>) and annotated them with a variety of action language
-            queries into the <strong>MOT25-StAG</strong> dataset. Participants need to use all annotations in MOT25-StAG and
+            queries into the <strong>MOT25-StAG</strong> dataset. Participants can use all annotations in MOT25-StAG and
             test their temporal window localization and bounding box tracking methods on the MOT25-StAG test set.
             <br/></br>
 
             <strong>Rules: </strong>
             <ul style="list-style-type:disc;">
-                <li> Participants will have to provide a technical report and code, showing that only the allowed
-                    training data was used.
+                <li> Participants are allowed to train their models using <strong>open-source</strong> datasets.</li>
+                <li> Participants have to provide a technical report and code, showing which datasets were used for training.
                 </li>
+                <li> Participants <strong>must</strong> use the MOT25-StAG test set for testing.</li>
             </ul>
 
 
@@ -245,10 +245,12 @@
             website</a>, <a href="https://motchallenge.net/data/MOT17/">MOT17 website</a> and <a
                 href="https://motchallenge.net/data/MOT20">MOT20 website</a>. All annotations can be found <a href="https://drive.google.com/drive/folders/1S-qfooO6VMbibmhWEnBLkzlCj0HF1WYY?usp=drive_link">here</a>.
             <br/>
-            <strong>Baselines: </strong> Our baseline for spatial grounding is available <a href="https://github.com/Shuaicong97/TempRMOT/tree/test">here</a>,
-            and baseline for temporal grounding is available <a href="https://github.com/Shuaicong97/FlashVTG/tree/test">here</a>.
+            <strong>Baselines: </strong> Our baseline for spatial grounding is available <a href="https://github.com/Shuaicong97/TempRMOT">here</a>,
+            and baseline for temporal grounding is available <a href="https://github.com/Shuaicong97/FlashVTG">here</a>.
             <br/>
-            <strong>Metric: </strong> <a href="https://github.com/Shuaicong97/SVAGEval">HOTA, R1@X, R5@X, R10@X, mAP, mIoU</a>.
+            <strong>Metric: </strong> HOTA, R1@X, R5@X, R10@X, mAP, mIoU.
+            <br/>
+            <strong>Evaluation script: </strong> <a href="https://github.com/Shuaicong97/SVAGEval">Evaluation Toolkit</a>
             <br/>
             <strong>Test server: </strong> The test server will be made available in the Codabench website on August 1st.<br/></br>
 
