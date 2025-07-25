@@ -3245,6 +3245,7 @@ input, select, textarea {
 	/* 你可以针对不同的img添加class来控制尺寸 */
 	.top_all {
 		width: 100%;
+		padding: 10px;
 	}
 
 .video-container {
