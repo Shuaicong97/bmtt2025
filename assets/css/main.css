@@ -2841,9 +2841,10 @@ input, select, textarea {
 		margin: 10px auto;
 		width: 90%;
 		text-align: left;
+		padding: 5px;
 
 		font-family: "Courier New", monospace;
-		font-size: 0.7rem;
+		font-size: 0.85rem;
 		line-height: 1.5;
 
 		white-space: pre-wrap;
