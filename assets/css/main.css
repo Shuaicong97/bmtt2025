@@ -2836,6 +2836,20 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
+	.bibtex-block {
+		background-color: #f7f7f7;
+		margin: 10px auto;
+		width: 90%;
+		text-align: left;
+
+		font-family: "Courier New", monospace;
+		font-size: 0.7rem;
+		line-height: 1.5;
+
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
+
 /* Features */
 
 	.features {
