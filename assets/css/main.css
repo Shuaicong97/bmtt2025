@@ -3764,6 +3764,7 @@ input, select, textarea {
 
 		#main table.alt tbody tr td {
 			border-color: #dddddd;
+			font-size: 15pt;
 		}
 
 		#main .spotlight .image {
